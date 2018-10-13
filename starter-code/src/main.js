@@ -28,8 +28,9 @@ var cards = [
 $(document).ready(function(){
 
   var memoryGame = new MemoryGame(cards);
-  MemoryGame.shuffleCards()
   
+  MemoryGame.shuffleCards()
+
   var html = '';
   memoryGame.cards.forEach(function (pic) {
     html += '<div class="card" data-card-name="'+ pic.name +'">';
@@ -44,7 +45,7 @@ $(document).ready(function(){
 
   // Bind the click event of each element to a function
   $('.back').click(function () {
-      $(".back").fadeToggle()
+      $(".back").fadeToggle(300)
   });
 });
 
